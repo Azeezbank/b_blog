@@ -1,11 +1,20 @@
-import React, {useRef} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { motion, useInView } from 'framer-motion';
+import { easeIn, motion } from 'framer-motion';
+import { useInView } from "react-intersection-observer";
 
 // NavBar section component
 const Home = () => {
-    const ref = useRef(null);
-    const isInView = useInView(ref, {once: true});
+    const [ref1, inView1] = useInView({
+        triggerOnce: true,
+        threshold: 0.2,
+    });
+
+    const [ref2, inView2] = useInView({
+        triggerOnce: true,
+        threshold: 0.5,
+    });
+
   return (
     <>
       <nav className="navbar navbar-expand-md bg-danger bg-gradient fixed-top">
@@ -94,7 +103,7 @@ const Home = () => {
         <div className="topb">
           <div className="topt">
             <h6 className="top">Best Drinks and Delicacies By</h6>
-            <motion.h3 ref={ref} initial={{opacity: 0, y: 50}} animate={isInView ? {opacity: 1, y: 0} : {}} transition={{duration: 1.5}} className="p-4">Bankky B</motion.h3>
+            <motion.h3 ref={ref1} initial={{opacity: 0, y: 50}} animate={{opacity: inView1 ? 1 : 0, y: 0}} transition={{duration: 1.5}} className="p-4">Bankky B</motion.h3>
             <p className="paragraph">
               Food not only satisfies our hunger but also brings people
               together, creating shared experiences and memories. From the rich
@@ -176,10 +185,11 @@ const Home = () => {
           </div>
 
           <div className="row mt-5 text-light" id={"service"}>
-            <div className="col-sm-6 bg-danger mt-2 p-5 rounded">
+            <motion.div ref={ref2} initial={{opacity: 0, y: 50}} animate={{opacity: inView2 ? 1 : 0, y: 0}}
+             transition={{duration: 1.5, ease: "easeIn"}} className="col-sm-6 bg-danger mt-2 p-5 rounded">
               <strong>OUR SERVICES</strong>
               <h4>We Will Help Your Health Growing</h4>
-            </div>
+            </motion.div>
             <div className="col-sm-6 bg-danger mt-2 p-5 rounded">
               <h3>
                 <i className="bi bi-egg"></i>
