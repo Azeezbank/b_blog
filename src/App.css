@@ -1,0 +1,62 @@
+.top {
+  padding-top: 100px;
+}
+.img1 {
+  width: 100%;
+}
+.text {
+  padding-top: 10%;
+}
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+}
+.no-line {
+  text-decoration: none;
+}
+.best,
+.blog,
+.detail {
+  padding-top: 100px;
+}
+.account {
+   height:400px; background-color: red; opacity: 0.5; margin-left: -12px; margin-right: -12px
+}
+.my {
+  padding-top:200px; opacity: 10
+}
+.userimg {
+  width: 60%
+}
+.myPost {
+  display: grid; grid-template-columns: 50% 50%; gap: 10px
+}
+.thumb {
+  width: 100%
+}
+.link {
+  text-decoration: none; color: black
+}
+.topb {
+  background-color: black; opacity: 0.7; margin-left: -50px; margin-right: -55px; margin-bottom: -50px
+}
+.topt {
+  padding-left: 10%; padding-right: 10%; padding-bottom: 80px
+}
+
+@media (max-width: 760px) {
+  .myPost {display: grid; grid-template-columns: auto;}
+}
+
+
+@media (min-width: 1200px) {
+.car, .paragraph {margin-left: 10%; margin-right: 10%;}
+.carr {padding-left: 10%; padding-right: 10%;}
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: auto;
+  }
+}
