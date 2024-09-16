@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useRef} from "react";
 import { Link } from "react-router-dom";
+import { motion, useInView } from 'framer-motion';
 
 // NavBar section component
 const Home = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, {once: true});
   return (
     <>
       <nav className="navbar navbar-expand-md bg-danger bg-gradient fixed-top">
@@ -91,7 +94,7 @@ const Home = () => {
         <div className="topb">
           <div className="topt">
             <h6 className="top">Best Drinks and Delicacies By</h6>
-            <h3 className="p-4">Bankky B</h3>
+            <motion.h3 ref={ref} initial={{opacity: 0, y: 50}} animate={isInView ? {opacity: 1, y: 0} : {}} transition={{duration: 1.5}} className="p-4">Bankky B</motion.h3>
             <p className="paragraph">
               Food not only satisfies our hunger but also brings people
               together, creating shared experiences and memories. From the rich
