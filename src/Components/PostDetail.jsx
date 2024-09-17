@@ -153,7 +153,7 @@ useEffect(() => {
           </p>
           <p className="pt-3" style={{whiteSpace:"pre-wrap"}}>{post.content}</p>
         
-          <div onClick={() => setCount(inc => inc + 1)}>like <i className="bi bi-hand-thumbs-up ms-1 me-1 text-primary"></i> {count}</div>
+          <div onClick={() => setCount(inc => inc + 1)}>like <i className="bi bi-hand-thumbs-up"></i> {count}</div>
           
         </div>
 
