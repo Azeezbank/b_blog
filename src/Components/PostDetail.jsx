@@ -10,6 +10,16 @@ function PostDetail() {
   const [comment, setComment] = useState(""); // To store comment input
   const [submittedData, setSubmittedData] = useState([]);
 
+
+  const [count, setCount] = useState(() => {
+    const savedCount = localStorage.getItem('count');
+    return savedCount ? parseInt(savedCount) : 0;
+  });
+useEffect(() => {
+    localStorage.setItem('count', count);
+  }, [count]);
+
+
   useEffect(() => {
     const storedData = JSON.parse(localStorage.getItem("comments")) || [];
     setSubmittedData(storedData);
@@ -142,6 +152,9 @@ function PostDetail() {
             By {post.author_name} <br /> {post.created_at}
           </p>
           <p className="pt-3" style={{whiteSpace:"pre-wrap"}}>{post.content}</p>
+        
+          <div onClick={() => setCount(inc => inc + 1)}>like{count}</div>
+          
         </div>
 
         {/* Displaying the submitted data */}
