@@ -163,7 +163,7 @@ function AllPost() {
           <div className="col-sm-8">
             <div className="row">
               <div className="col-sm-6">
-                <h1 className="text-danger pt-5 pb-4 fs-1 ps-5 ">
+                <h1 className="text-danger pt-5 pb-4 fs-1 ps-5 mt-5">
                   BLOG POSTS
                 </h1>
               </div>
