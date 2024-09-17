@@ -16,14 +16,14 @@
   text-decoration: none;
 }
 .best,
-blog,
+.blog,
 .detail {
   padding-top: 100px;
 }
 .account {
    height:400px; background-color: red; opacity: 0.5; margin-left: -12px; margin-right: -12px
 }
-.my {
+my {
   padding-top:200px; opacity: 10
 }
 .userimg {
