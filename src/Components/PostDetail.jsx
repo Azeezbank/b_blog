@@ -152,8 +152,9 @@ useEffect(() => {
             By {post.author_name} <br /> {post.created_at}
           </p>
           <p className="pt-3" style={{whiteSpace:"pre-wrap"}}>{post.content}</p>
+          <hr/>
         
-          <div onClick={() => setCount(inc => inc + 1)}>like <i className="bi bi-power"></i> {count}</div>
+          <div className="pt-3" onClick={() => setCount(inc => inc + 1)}>like <i className="bi bi-hand-thumbs-up text-primary"></i> {count}</div>
           
         </div>
 
