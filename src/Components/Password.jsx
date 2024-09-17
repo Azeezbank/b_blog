@@ -123,7 +123,7 @@ function Password() {
 
 
     
-      <div className='bg-light container-fluid '>
+      <div className='bg-light container-fluid mt-5'>
       {!isLogin ? (
       <div className='container bg-light pb-5'>
       <form className='bg-white p-5 was-validated' onSubmit={handleLogin}>
