@@ -155,7 +155,7 @@ useEffect(() => {
           <hr/>
         
           <div className="pt-3" onClick={() => setCount(inc => inc + 1)}>like <i className="bi bi-hand-thumbs-up text-primary"></i> {count}</div>
-          <div className="pt-3" onClick={() => setCount(count - 1)}></div>
+          <div className="pt-3" onClick={() => setCount(count - 1)}>Unlike</div>
         </div>
 
         {/* Displaying the submitted data */}
