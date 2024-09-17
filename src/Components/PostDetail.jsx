@@ -40,7 +40,7 @@ useEffect(() => {
 
   if (!post) {
     return (
-      <h1 className="text-danger text-center pt-5">
+      <h1 className="text-danger text-center pd pt-5">
         <div className="spinner-border"></div>Loading...
       </h1>
     );
