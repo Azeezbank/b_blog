@@ -154,8 +154,8 @@ useEffect(() => {
           <p className="pt-3" style={{whiteSpace:"pre-wrap"}}>{post.content}</p>
           <hr/>
         
-          <div className="pt-3" onClick={() => setCount(inc => inc + 1)}>like <i className="bi bi-hand-thumbs-up text-primary"></i> {count}</div>
-          <div className="pt-3" onClick={() => setCount(count - 1)}>Unlike</div>
+          <span className="pt-3" onClick={() => setCount(inc => inc + 1)}>like <i className="bi bi-hand-thumbs-up text-primary"></i> {count}</span>
+          <span className="pt-3" onClick={() => setCount(count - 1)}><i className="bi bi-hand-thumbs-down"></i> Unlike</span>
         </div>
 
         {/* Displaying the submitted data */}
