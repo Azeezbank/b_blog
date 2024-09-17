@@ -44,6 +44,12 @@
 .topt {
   padding-left: 10%; padding-right: 10%; padding-bottom: 80px
 }
+.point:hover {
+  cursor: pointer; background-color: brown;
+}
+.point2:hover {
+  background-color: antiquewhite;
+}
 
 @media (max-width: 760px) {
   .myPost {display: grid; grid-template-columns: auto;}
