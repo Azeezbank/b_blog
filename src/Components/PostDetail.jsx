@@ -146,7 +146,7 @@ useEffect(() => {
         </div>
       </nav>
 
-      {loading ? (<h1 className="text-danger text-center pt-5">
+      {loading ? (<h1 className="text-danger text-center pt-5 pb-5">
         <div className="spinner-border"></div>Loading...
       </h1>) : (
       <div className="container-fluid bg-light detail pb-5">
