@@ -9,6 +9,7 @@ function PostDetail() {
   const [name, setName] = useState(""); // To store name input
   const [comment, setComment] = useState(""); // To store comment input
   const [submittedData, setSubmittedData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
 
   const [count, setCount] = useState(() => {
@@ -34,17 +35,23 @@ useEffect(() => {
   useEffect(() => {
     fetch(`https://backend-i9tl.onrender.com/api/posts/${id}`)
       .then((response) => response.json())
-      .then((data) => setPost(data))
-      .catch((error) => console.error("Error fetching post:", error));
+      .then((data) => {
+        setPost(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching post:", error);
+            setLoading(false);
+      });
   }, [id]);
 
-  if (!post) {
+  /*if (!post) {
     return (
       <h1 className="text-danger text-center pt-5">
         <div className="spinner-border"></div>Loading...
       </h1>
     );
-  }
+  }*/
 
   // Function to handle form submission
   const handleSubmit = (e) => {
@@ -139,6 +146,9 @@ useEffect(() => {
         </div>
       </nav>
 
+      {loading ? (<h1 className="text-danger text-center pt-5">
+        <div className="spinner-border"></div>Loading...
+      </h1>) : (
       <div className="container-fluid bg-light detail pb-5">
         <div className="card car p-5">
           <img
@@ -235,6 +245,7 @@ useEffect(() => {
           </form>
         </div>
       </div>
+          )};
 
       <div className="container-fluid bg-danger p-5 pt-3 text-center text-white">
         <div className="row mt-5 mb-5">
