@@ -145,7 +145,7 @@ const Login = () => {
               className="img-circle userimg"
             />{" "}
             <br />
-            <strong className="mt-2">Bankky@yahoo.com</strong> <hr />
+            <strong className="mt-2">Bankky@yahoo.com{posts.author_name}</strong> <hr />
             <h5 className="bg-light text-dark p-2 rounded">
               <i className="bi bi-person"></i> Dashboard
             </h5>
@@ -219,7 +219,7 @@ const Login = () => {
                     >
                       <img
                         className="thumbnail thumb"
-                        src="https://www.anandnaturecure.in/wp-content/uploads/2019/01/natural-food.jpg"
+                        src={post.image}
                         alt="img"
                       />
                       <h3 className="pt-4">{post.title}</h3>

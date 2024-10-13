@@ -11,7 +11,8 @@ const Editpost = () => {
     content: "",
     user_id: "",
     email: "",
-    category: ""
+    category: "",
+    image: ""
   });
   
 useEffect(() => {
@@ -135,7 +136,7 @@ useEffect(() => {
         type="text"
         value={posts.author_name}
         id={"author"}
-        onChange={(e) => setPost({ ...posts, author_name: e.target.value})}
+        onChange={(e) => setPosts({ ...posts, author_name: e.target.value})}
         placeholder="Post Author"
         className="form-control"
         required 
@@ -201,6 +202,21 @@ useEffect(() => {
           <option>Healthy Eating</option>
           <option>Food Trends & News</option>
         </select>
+            <div className="invalid-feedback mb-3">Field cannot be empty.</div>
+            </div>
+
+            <div>
+            <label htmlFor={"image"} className="form-label"> Image link</label>
+      <input
+        type="text"
+        id={"image"}
+        value={posts.image}
+        onChange={(e) => setPosts({ ...posts, image: e.target.value})}
+        placeholder="Input live image link (URL)"
+        className="form-control"
+        required
+      />
+            <div className="valid-feedback mb-3">Valid.</div>
             <div className="invalid-feedback mb-3">Field cannot be empty.</div>
             </div>
         

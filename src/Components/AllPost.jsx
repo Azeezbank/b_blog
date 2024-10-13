@@ -191,7 +191,7 @@ function AllPost() {
                     >
                       <img
                         className="thumbnail"
-                        src="https://www.anandnaturecure.in/wp-content/uploads/2019/01/natural-food.jpg"
+                        src={post.image}
                         alt="img"
                       />
                       <h3 className="pt-4">{post.title}</h3>
@@ -233,7 +233,7 @@ function AllPost() {
                 >
                   <img
                     className="thumbnail"
-                    src="https://www.anandnaturecure.in/wp-content/uploads/2019/01/natural-food.jpg"
+                    src={post.image}
                     alt="img"
                   />
 

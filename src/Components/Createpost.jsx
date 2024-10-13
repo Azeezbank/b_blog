@@ -7,6 +7,7 @@ const Createpost = () => {
   const [content, setContent] = useState("");
   const [user_id, setUser_id] = useState("");
   const [category, setCategory] = useState("");
+  const [image, setImage] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -19,7 +20,7 @@ const Createpost = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ title, author_name, email, content, user_id, category }),
+          body: JSON.stringify({ title, author_name, email, content, user_id, category, image }),
         },
       );
 
@@ -31,6 +32,7 @@ const Createpost = () => {
         setContent("");
         setUser_id("");
         setCategory("");
+        setImage("");
         alert("Post successfull");
       } else {
         // Optionally handle non-OK responses here
@@ -123,6 +125,17 @@ const Createpost = () => {
           <option>Healthy Eating</option>
           <option>Food Trends & News</option>
         </select>
+
+        <label htmlFor="image" className="form-label">Image URL</label>
+        <input
+          type="text"
+          value={image}
+          onChange={(e) => setImage(e.target.value)}
+          placeholder="Input your live image link (URL)"
+          name="image"
+          className="form-control bg-light mb-3"
+          required
+        />
         
 
         <div className="form-check">
