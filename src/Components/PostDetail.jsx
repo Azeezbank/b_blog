@@ -155,6 +155,7 @@ useEffect(() => {
             className="thumbnail"
             src={post.image}
             alt="img"
+            style={{width: '100%'}}
           />
           <h3 className="pt-4 text-dark">{post.title}</h3>
           <p className="text-danger">
