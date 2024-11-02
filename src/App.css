@@ -50,6 +50,7 @@
 .point2:hover {
   background-color: antiquewhite;
 }
+.hover {cursor: pointer;}
 
 @media (max-width: 760px) {
   .myPost {display: grid; grid-template-columns: auto;}
