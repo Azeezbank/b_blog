@@ -67,7 +67,7 @@ const Home = () => {
 
               <li className="nav-item">
                     <div className="dropdown">
-                  <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="">
+                  <span className="nav-link dropdown-toggle hover" data-bs-toggle="dropdown" href="">
                   My Account
                   </span>
                       <ul className="dropdown-menu">
@@ -121,7 +121,7 @@ const Home = () => {
             </strong>{" "}
             <br />
             <Link to={"/Contact"}>
-            <button className="btn btn-light mt-3">Contact Me</button>
+            <button className="btn btn-light mt-3 point2">Contact Me</button>
             </Link>
           </div>
         </div>
@@ -372,7 +372,7 @@ const Home = () => {
               vision to life with delicious results.
             </p>
            <Link to={"/Contact"}>
-            <h2 className="btn bg-danger shadow-lg pt-3 pb-3 rounded text-white">
+            <h2 className="btn bg-danger shadow-lg pt-3 pb-3 rounded text-white point2">
               <i className="bi bi-telephone"></i> Contact Us Today
             </h2>
            </Link>

@@ -175,7 +175,7 @@ function AllPost() {
 
               <li className="nav-item">
                     <div className="dropdown">
-                  <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="">
+                  <span className="nav-link dropdown-toggle hover" data-bs-toggle="dropdown" href="">
                   My Account
                   </span>
                       <ul className="dropdown-menu">

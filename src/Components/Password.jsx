@@ -56,7 +56,7 @@ function Password() {
                 className="navbar-brand"
                 style={{ fontSize: "1.6rem", fontWeight: "bold" }}
               >
-             <i class="bi bi-cup-hot"></i>   Bankky <small>Blog.</small>
+             <i className="bi bi-cup-hot"></i>   Bankky <small>Blog.</small>
               </span>
               <button
                 className="navbar-toggler bg-light bg-gradient"
@@ -101,7 +101,7 @@ function Password() {
                     
                     <li className="nav-item">
                     <div className="dropdown">
-                  <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="">
+                  <span className="nav-link dropdown-toggle hover" data-bs-toggle="dropdown" href="">
                   My Account
                   </span>
                       <ul className="dropdown-menu">

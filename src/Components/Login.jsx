@@ -59,7 +59,7 @@ const Login = () => {
             className="navbar-brand"
             style={{ fontSize: "1.6rem", fontWeight: "bold" }}
           >
-         <i class="bi bi-cup-hot"></i>   Bankky <small>Blog.</small>
+         <i className="bi bi-cup-hot"></i>   Bankky <small>Blog.</small>
           </span>
           <button
             className="navbar-toggler bg-light bg-gradient"

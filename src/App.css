@@ -1,3 +1,4 @@
+* {font-family: 'Gill Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Times New Roman', Times, serif;}
 .top {
   padding-top: 100px;
 }
@@ -45,10 +46,10 @@
   padding-left: 10%; padding-right: 10%; padding-bottom: 80px
 }
 .point:hover {
-  cursor: pointer; background-color: brown;
+  cursor: pointer; font-size: 20px;
 }
 .point2:hover {
-  background-color: antiquewhite;
+  background-color: antiquewhite; font-size: 15px;
 }
 .hover {cursor: pointer;}
 
