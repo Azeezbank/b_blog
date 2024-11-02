@@ -14,6 +14,8 @@ function AllPost() {
   const [recipts, setRecipts] = useState([]);
   const [isRecipts, setIsRecipts] = useState(false);
   const [postss, setPostss] = useState(false);
+  const [health, setHealth] = useState([]);
+  const [isHealth, setIsHealth] = useState(false);
 
   useEffect(() => {
     fetch("https://backend-i9tl.onrender.com/api/posts")
@@ -21,6 +23,8 @@ function AllPost() {
       .then((data) => {
         setPosts(data);
         setPostss(true);
+        setIsRecipts(false);
+        setIsHealth(false);
         setFilteredPosts(data);
         setLoading(false);
       })
@@ -51,13 +55,28 @@ function AllPost() {
         setRecipts(data);
         setIsRecipts(true);
         setPostss(false);
+        setIsHealth(false);
       })
       .catch((error) => {
         console.log('Error fetching post', error)
       })
   };
 
-  // 
+  //display healthy category
+  const Healthy = (e) => {
+    e.preventDefault();
+      fetch("https://backend-i9tl.onrender.com/api/health")
+      .then((response) => response.json())
+      .then((data) => {
+        setHealth(data);
+        setIsRecipts(false);
+        setPostss(false);
+        setIsHealth(true);
+      })
+      .catch((error) => {
+        console.log('Error fetching post', error)
+      })
+  };
 
   // Retrieve the wishlist from localStorage when the component mounts
   useEffect(() => {
@@ -277,7 +296,7 @@ function AllPost() {
                       </Link>
                       <button
                         className="bg-danger text-white ms-5 me-5 border rounded"
-                        onClick={() => toggleWishlist(post)}
+                        onClick={() => toggleWishlist(r)}
                       >
                         {isWishlisted(r)
                           ? "Remove from Wishlist"
@@ -286,7 +305,51 @@ function AllPost() {
                     </li>
                   ))}
               </ul>) : ("")
-              }
+              };
+
+
+              {/* display health category */}
+              <div>
+                {isHealth ? (
+                <ul className="p-3 grid">
+                  {health.map((h, index) => (
+                    <li
+                      key={h.id || index}
+                      className="card bg-white text-dark border rounded shadow-sm p-3"
+                      style={{ listStyle: "none" }}
+                    >
+                      <img
+                        className="thumbnail"
+                        src={h.image}
+                        alt="img"
+                      />
+                      <h3 className="pt-4">{h.title}</h3>
+                      <small>
+                        {" "}
+                        <i className="bi bi-person-fill bg-light text-danger p-2 rounded-circle"></i>
+                        By {h.author_name} <br /> {h.created_at}
+                      </small>{" "}
+                      <p className="pt-3" style={{whiteSpace:"pre-wrap"}}>{h.content.substring(0, 300)}...</p>
+                      <br />
+                      <Link to={`/PostDetail/${h.id}`} className="no-line">
+                        <p className="text-danger">
+                          Read more{" "}
+                          <i className="bi  bi-chevron-double-right"></i>{" "}
+                        </p>{" "}
+                      </Link>
+                      <button
+                        className="bg-danger text-white ms-5 me-5 border rounded"
+                        onClick={() => toggleWishlist(h)}
+                      >
+                        {isWishlisted(h)
+                          ? "Remove from Wishlist"
+                          : "Add to Wishlist"}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+                ) : ("")}
+                </div>
 
             {/* Display the wishlist section */}
             <h2 className="text-danger ms-5 mt-5">Whishlist</h2>
@@ -349,7 +412,7 @@ function AllPost() {
               <h3 className="pt-5 ms-4">CATEGORIES</h3>
               <p className="text-danger pt-3 ms-3 hover" onClick={Receipt}>Recipes & Cooking Tips</p>
               <p className="text-danger pt-3 ms-3 hover" onClick={() => {alert('No product in this category')}}>Restaurant Reviews</p>
-              <p className="text-danger pt-3 ms-3">Healthy Eating</p>
+              <p className="text-danger pt-3 ms-3 hover" onClick={Healthy}>Healthy Eating</p>
               <p className="text-danger pt-3 ms-3 pb-4 hover" onClick={() => {alert('No product in this category')}}>Food Trends & News</p>
             </div>
           </div>
