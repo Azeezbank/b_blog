@@ -442,22 +442,22 @@ function AllPost() {
               <div className="col-2"></div>
               <div className="col-2">
                 <h2>
-                  <a href="https://www.facebook.com/bankole.azeez.940?mibextid=ZbWKwL"><i className="bi bi-facebook text-white"></i></a>
+                  <a href="https://www.facebook.com/bankole.azeez.940?mibextid=ZbWKwL"><i className="bi bi-facebook text-white point"></i></a>
                 </h2>
               </div>
               <div className="col-2">
                 <h2>
-                  <a href="https://x.com/BankoleAzeezBa2"><i className="bi bi-twitter text-white"></i></a>
+                  <a href="https://x.com/BankoleAzeezBa2"><i className="bi bi-twitter text-white point"></i></a>
                 </h2>
               </div>
               <div className="col-2">
                 <h2>
-                  <a href="https://wa.me/message/WAVWLMSBJZMNI1"><i className="bi bi-whatsapp text-white"></i></a>
+                  <a href="https://wa.me/message/WAVWLMSBJZMNI1"><i className="bi bi-whatsapp text-white point"></i></a>
                 </h2>
               </div>
               <div className="col-2">
                 <h2>
-                  <a href="https://www.linkedin.com/in/bankole-azeez-babatunde-9a59772a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i className="bi bi-linkedin text-white"></i></a>
+                  <a href="https://www.linkedin.com/in/bankole-azeez-babatunde-9a59772a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i className="bi bi-linkedin text-white point"></i></a>
                 </h2>
               </div>
               <div className="col-2"></div>
