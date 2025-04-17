@@ -52,6 +52,9 @@
   background-color: antiquewhite; font-size: 15px;
 }
 .hover {cursor: pointer;}
+.thumbnail {
+  width: 100%;
+}
 
 @media (max-width: 760px) {
   .myPost {display: grid; grid-template-columns: auto;}
