@@ -150,7 +150,7 @@ useEffect(() => {
         <div className="spinner-border"></div>Loading...
       </h1>) : (
       <div className="container-fluid bg-light detail pb-5">
-        <div className="card car p-5">
+        <div className="card car p-2">
           <img
             className="thumbnail"
             src={post.image}
@@ -192,7 +192,7 @@ useEffect(() => {
           ))}
         </ul>
 
-        <div className="card car p-5 mt-5">
+        <div className="card car p-2 mt-5">
           <h6>Leave a Comment</h6>
           <p>
             Your email address will not be publish. The requied fields are
